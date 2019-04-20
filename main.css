@@ -3,24 +3,46 @@ body {
 }
 
 
-form {
-    width: 100%;
+/* form.search {
+    width: 80%;
     height: 150px;
-    /* border: black solid 1px; */
+    border: white solid 1px;
     border-bottom: #727272 solid 2px;
-    
+} */
+
+/* div.upload {
+    width: 5%;
+    height: 150px;
+    border: white solid 1px;
+    border-bottom: #727272 solid 2px;
+    display: block;
+    float: left;
+} */
+
+form {
+    /* border: white solid 1px; */
+    height: 150px;
+    margin-top: -10px !important;
+    width: 99% !important;
+    border-bottom: #727272 solid 2px;
 }
+
+/* div.titlebar-container {
+    border: white solid 1px;
+    border-bottom: #727272 solid 2px;
+} */
 
 .title-text {
     float: left;
-    margin-top: 28px;
+    margin-top: 26px;
     padding-right: 20px;
     color: #FF3D53;
     font-family: "Calibri";
     font-size: 50pt;
 }
+
 .search {
-    width: 60%;
+    width: 50%;
     padding: 10px;
     font-size: 20px;
     margin-top: 45px;
@@ -30,5 +52,11 @@ form {
     width: 150px;
     padding: 10px;
     font-size: 20px;
-    /* float: left; */
+}
+
+img.upload {
+    width: 150px;
+    /* margin-bottom: -17px; */
+    margin-top: 45px;
+    float: right;
 }
