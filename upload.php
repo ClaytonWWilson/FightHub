@@ -2,6 +2,7 @@
 <head>
     <title>FightHub - Upload</title>
     <link rel="stylesheet" href="main.css">
+    <script src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -14,7 +15,7 @@
     </form>
 
     <!-- submit.php will read the variables from the url and add it to the database -->
-    <form class="upload-form" onsubmit="validateUpload()">
+    <form class="upload-form" id="upload-form" action="submit.php">
 
         <h3>Youtube URL *</h3>
         <input type="text" name="url" id="url">
@@ -52,7 +53,7 @@
         <input type="text" name="stage">
         
         
-        <input type="submit" name="submit" value="Submit">
+        <input type="button" name="submit_button" value="Submit" onclick="validateUpload()">
     </form>
 
 </body>
