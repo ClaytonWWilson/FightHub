@@ -44,9 +44,12 @@
         <h3>Select Game *</h3>
         <select name="game">
             <option disabled selected value>-- Game --</option>
-            <option value="Street Fighter">Street Fighter</option>
-            <option value="Mortal Kombat">Mortal Kombat</option>
-            <option value="Super Smash Bros">Super Smash Bros</option>
+            <option value="Street Fighter V">Street Fighter V</option>
+            <option value="Mortal Kombat 11">Mortal Kombat 11</option>
+            <option value="Super Smash Bros Melee">Super Smash Bros Melee</option>
+            <option value="Super Smash Bros Ultimate">Super Smash Ultimate</option>
+            <option value="Killer Instinct">Killer Instinct</option>
+            <option value="Injustice">Injustice</option>       
         </select>
         
         <h3>Stage Name *</h3>
