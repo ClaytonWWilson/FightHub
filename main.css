@@ -1,0 +1,67 @@
+body {
+    background-color: #1E1E1E;
+}
+
+
+/* Styles for titlebar */
+
+form.search {
+    /* border: white solid 1px; */
+    height: 150px;
+    margin-top: -10px !important;
+    width: 99% !important;
+    border-bottom: #727272 solid 2px;
+}
+
+.title-text {
+    float: left;
+    margin-top: 26px;
+    padding-right: 20px;
+    color: #FF3D53;
+    font-family: "Calibri";
+    font-size: 50pt;
+}
+
+.search {
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 45px;
+}
+
+.submit {
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+img.upload {
+    width: 150px;
+    /* margin-bottom: -17px; */
+    margin-top: 45px;
+    float: right;
+}
+
+
+/* Styles for upload.php */
+
+form.upload-form {
+    /* border: white solid 1px; */
+    border-left: #727272 solid 2px;
+    border-right: #727272 solid 2px;
+    margin: 0 25% 0 25%;
+}
+
+.upload-form input, .upload-form textarea, .upload-form select {
+    display: block;
+    margin-left: 20px;
+    /* margin-bottom: 30px; */
+    /* border: white solid 1px; */
+}
+
+.upload-form h3 {
+    color: #FF3D53;
+    /* border: white solid 1px; */
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
