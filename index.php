@@ -1,23 +1,20 @@
 <html>
 <head>
-    <title>PHP Test</title>
+    <title>FightHub - Home</title>
+    <link rel="stylesheet" href="main.css">
 </head>
     <body>
-    <?php echo '<p>Hello World</p>';
+        <form action="search.php">
+            <h1 class="title-text">FightHub</h1>
+            <input type="text" name="query" class="search" placeholder="Search..">
+            <input type="submit" name="submit" class="submit" value="Search">
+        </form>
 
-    // In the variables section below, replace user and password with your own MySQL credentials as created on your server
-    $servername = "localhost";
-    $username = "fighthubuser";
-    $password = "cC33dC8W";
 
-    // Create MySQL connection
-    $conn = mysqli_connect($servername, $username, $password);
 
-    // Check connection - if it fails, output will include the error message
-    if (!$conn) {
-        die('<p>Connection failed: <p>' . mysqli_connect_error());
-    }
-    echo '<p>Connected successfully</p>';
-    ?>
-</body>
+
+
+
+        <!-- This is where php code for loading preview videos below the titlebar will go -->
+    </body>
 </html>
