@@ -19,18 +19,13 @@ body {
     float: left;
 } */
 
-form {
+form.search {
     /* border: white solid 1px; */
     height: 150px;
     margin-top: -10px !important;
     width: 99% !important;
     border-bottom: #727272 solid 2px;
 }
-
-/* div.titlebar-container {
-    border: white solid 1px;
-    border-bottom: #727272 solid 2px;
-} */
 
 .title-text {
     float: left;
