@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
     <body>
+        <!-- Titlebar -->
         <form class="search" action="search.php">
             <h1 class="title-text">FightHub</h1>
             <input type="text" name="query" class="search" placeholder="Search..">
