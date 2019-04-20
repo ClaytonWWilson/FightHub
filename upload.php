@@ -20,7 +20,6 @@
         <h3>Youtube URL *</h3>
         <input type="text" name="url" id="url">
 
-<<<<<<< HEAD
         <h3>Video Title *</h3>
         <input type="text" name="title" id="title">
         
