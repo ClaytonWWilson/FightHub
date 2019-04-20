@@ -20,6 +20,7 @@
         <h3>Youtube URL *</h3>
         <input type="text" name="url" id="url">
 
+<<<<<<< HEAD
         <h3>Video Title *</h3>
         <input type="text" name="title" id="title">
         
@@ -51,11 +52,10 @@
             <option value="Killer Instinct">Killer Instinct</option>
             <option value="Injustice">Injustice</option>       
         </select>
-        
+
         <h3>Stage Name *</h3>
         <input type="text" name="stage" id="stage">
-        
-        
+
         <input type="button" name="submit_button" value="Submit" onclick="validateUpload()">
     </form>
 

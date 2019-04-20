@@ -1,9 +1,6 @@
 
 // Validates the data inputs on the upload form
 function validateUpload() {
-    // console.log("Validated!");
-    // document.getElementById("upload-form").submit();
-
     var url_bar = document.getElementById('url');
     var video_title = document.getElementById('title');
     var username = document.getElementById('username');
@@ -103,4 +100,3 @@ function validateUpload() {
     } else {
         alert('Please fill out the rest of the upload form.');
     }
-}
