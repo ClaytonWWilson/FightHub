@@ -46,14 +46,70 @@ function writeEntryforIndex() {
 	 }
 	 //echo '<font color="blue">not death</font>';
 	
-	 $search = $_GET['query'];
+	 //$search = $_GET['query'];
 	 $i = 0;
-
+	echo "<div class=\"video-list-container\"> ";
 	 while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC)) {
 
 		 if($i > 9){
 			break;
 		 }
+		
+		//Format for video_url
+		//Get substring from url after '='
+		$split = explode("=", $row['video_url']);
+
+		
+		
+		echo "<!-- Entry 1 -->" .
+		"<div id=\"video-item\">" .
+			"<iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/$split[1]\" frameborder=\"0\"" .
+
+			"allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"" .
+			"allowfullscreen>" .
+		"</iframe>" .
+
+
+		"<a href=\"{$row['video_url']}\">{$row['video_name']}</a>" .
+
+
+
+	"<div id=\"players-characters\">" .
+		"<table>" .
+			"<tr>" .
+				"<td class=\"header\">Players</td>" .
+				"<td class=\"header\">Characters</td>" .
+			"</tr>" .
+
+
+			"<tr>" .
+			        "<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
+				"<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+                        "</tr>" .	
+
+
+			"<tr>" .
+	                	"<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
+				"<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+			"</tr>" .	
+				
+
+		"</table>" .
+	"</div>" .
+
+
+
+	"<div id=\"game-stage\">" .
+		"<p>{$row['game']}</p>" .
+		"<p>{$row['stage']}</p>" .
+	"</div>" .
+
+
+	"<div id=\"description\">" .
+	        "<p>{$row['description']}</p>".
+	"</div>" .
+
+"</div> ";	
 
 		echo "<font color='#FF3D53'> VIDEO ID :{$row['video_id']}  <br> ".
 		"VIDEO URL : {$row['video_url']} <br> ".
@@ -75,6 +131,7 @@ function writeEntryforIndex() {
 		mysqli_close($conn);
 		$i++;
 	 }
+	 echo "</div>";
 }
 	writeEntryforIndex();
 	

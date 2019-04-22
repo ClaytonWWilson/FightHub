@@ -1,6 +1,6 @@
 <html>
 <head>
-	echo "<link rel='stylesheet' type='text/css' href='main.css' />";
+	
     <title>FightHub - Home</title>
     <link rel="stylesheet" href="main.css">
 </head>
@@ -53,7 +53,7 @@ function writeEntryforIndex() {
 	
 	 
 	// $i = 9;
-
+	echo "<div class=\"video-list-container\"> ";
 	 while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC)) {
 
 	//	 if($i > 9){
@@ -61,60 +61,64 @@ function writeEntryforIndex() {
 	//	 }
 		
 		 //Format for video_url
+		 //Get substring from url after '='
+		 $split = explode("=", $row['video_url']);
 
-		<div class="video-list-container">
-			<!-- Entry 1 -->
-			<div id="video-item">
-				<iframe width="640" height="360" src="https://www.youtube.com/embed/eCI8eAbq-4c" frameborder="0"
-					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen>
-				</iframe>
+	
+
+		 
+		 echo	"<!-- Entry 1 -->" . 
+			"<div id=\"video-item\">" .
+				"<iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/$split[1]\" frameborder=\"0\"" .
+					"allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"" .
+					"allowfullscreen>" .
+				"</iframe>" .
 		
 
-				<a href="https://www.youtube.com/watch?v=eCI8eAbq-4c">Video Title Here</a>
+				"<a href=\"{$row['video_url']}\">{$row['video_name']}</a>" .
 
-
-		//Format for player and characters
-		<div id="players-characters">
-			<table>
-		        	<tr>
-			        	<td class="header">Players</td>
-				        <td class="header">Characters</td>
-				</tr>
-
-				//Player1, character1 data
-				<tr>
-		                	<td class="data" id="table-border">Player1</td>
-					<td class="data" id="table-border">Character1</td>
-				</tr>
-
-
-				//Player2, character2 data
-				<tr>
-					<td class="data" id="table-border">Player2</td>
-				        <td class="data" id="table-border">Character2</td>
-				</tr>
-
-
-			</table>
-		</div>
-
-		//Game and stage
-		//
-		<div id="game-stage">
-	              	<p>Game Name</p>
-		      	<p>Stage Name</p>
-		</div>		
 
 		
-		<div id="description">
-		        <p>The description goes here.......</p>
-		</div>
+		"<div id=\"players-characters\">" .
+			"<table>" .
+		        	"<tr>" .
+			        	"<td class=\"header\">Players</td>" .
+				        "<td class=\"header\">Characters</td>" .
+				"</tr>" .
 
-		//</div>
-	</div>
+				
+				"<tr>" .
+		                	"<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
+					"<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+				"</tr>" .
+
+
+		
+				"<tr>" .
+					"<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
+				        "<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+				"</tr>" .
+
+
+			"</table>" .
+		"</div>" .
+
+	
+		
+		"<div id=\"game-stage\">" .
+	              	"<p>{$row['game']}</p>" .
+		      	"<p>{$row['stage']}</p>" .
+		"</div>" .		
+
+		
+		"<div id=\"description\">" .
+		        "<p>{$row['description']}</p>".
+		"</div>" .
+
+	
+	"</div> ";
  			
-
+		/*
 		echo "<font color='#FF3D53'> VIDEO ID :{$row['video_id']}  <br> ".
 		"VIDEO URL : {$row['video_url']} <br> ".
 		"VIDEO NAME : {$row['video_name']} <br> ".
@@ -131,11 +135,15 @@ function writeEntryforIndex() {
 		"--------------------------------<br></font>";
 
 
-		echo "<font color='#FF3D53'>Fetched data successfully\n</font>";
+		 echo "<font color='#FF3D53'>Fetched data successfully\n</font>";
+
+		 */ 
 		mysqli_close($conn);
 		$i++;
 	 }
+	 echo "</div>";
 }
+		
 	writeEntryforIndex();
 	
 	
