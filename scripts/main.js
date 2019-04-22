@@ -100,3 +100,4 @@ function validateUpload() {
     } else {
         alert('Please fill out the rest of the upload form.');
     }
+}
