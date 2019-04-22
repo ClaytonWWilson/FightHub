@@ -12,7 +12,7 @@ if($conn->connect_error) {
 }
 
 $url = $_GET['url'];
-$title = $_GET['name'];
+$title = $_GET['title'];
 $username = $_GET['username'];
 $description = $_GET['description'];
 $event_date = $_GET['video-date'];
