@@ -32,7 +32,7 @@ function writeEntryforIndex() {
 	 	die('<p>Connection failed: <p>' . mysql_error());
 	 }
 	 
-	 echo '<font color="#FF3D5"><p>Connect1ed successfully</p></font>';
+	 //echo '<font color="#FF3D5"><p>Connect1ed successfully</p></font>';
 
 	// $sql = 'SELECT video_id, video_url, video_name, username, date_upload, date_video, video_length, description, characters, players, game, stage, approved FROM video';
 		
@@ -40,7 +40,7 @@ function writeEntryforIndex() {
   	// mysqli_select_db('fighthubdata');
 	 //echo 'hello'; 	 
 	 $search = $_GET['query'];
-	 echo $search;
+	 //echo $search;
 
 	 $retval = mysqli_query( $conn, "select * from video where characters like '%$search%' OR players like '%$search%' OR description like '%$search%' OR game like '%$search%'  OR stage like '%$search%' OR video_name like '%$search%'");
 	//echo 'test';	
@@ -63,7 +63,8 @@ function writeEntryforIndex() {
 		 //Format for video_url
 		 //Get substring from url after '='
 		 $split = explode("=", $row['video_url']);
-
+		 $splitChar = explode(",", $row['characters']);
+	 	 $splitPlay = explode(",", $row['players']);	 
 	
 
 		 
@@ -88,15 +89,15 @@ function writeEntryforIndex() {
 
 				
 				"<tr>" .
-		                	"<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
-					"<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+		                	"<td class=\"data\" id=\"table-border\">$splitPlay[0]</td>" .
+					"<td class=\"data\" id=\"table-border\">$splitChar[0]</td>" .
 				"</tr>" .
 
 
 		
 				"<tr>" .
-					"<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
-				        "<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+					"<td class=\"data\" id=\"table-border\">$splitPlay[1]</td>" .
+				        "<td class=\"data\" id=\"table-border\">$splitChar[1]</td>" .
 				"</tr>" .
 
 

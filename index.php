@@ -30,7 +30,7 @@ function writeEntryforIndex() {
 	 	die('<p>Connection failed: <p>' . mysql_error());
 	 }
 	 
-	 echo '<font color="#FF3D5"><p>Connect1ed successfully</p></font>';
+	 //echo '<font color="#FF3D5"><p>Connect1ed successfully</p></font>';
 
 	// $sql = 'SELECT video_id, video_url, video_name, username, date_upload, date_video, video_length, description, characters, players, game, stage, approved FROM video';
 		
@@ -57,13 +57,14 @@ function writeEntryforIndex() {
 		
 		//Format for video_url
 		//Get substring from url after '='
-		$split = explode("=", $row['video_url']);
+		$splitUrl = explode("=", $row['video_url']);
 
-		
+		$splitChar = explode(",", $row['characters']);
+		$splitPlay = explode(",", $row['players']);
 		
 		echo "<!-- Entry 1 -->" .
 		"<div id=\"video-item\">" .
-			"<iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/$split[1]\" frameborder=\"0\"" .
+			"<iframe width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/$splitUrl[1]\" frameborder=\"0\"" .
 
 			"allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\"" .
 			"allowfullscreen>" .
@@ -83,14 +84,14 @@ function writeEntryforIndex() {
 
 
 			"<tr>" .
-			        "<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
-				"<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+			        "<td class=\"data\" id=\"table-border\">$splitPlay[0]</td>" .
+				"<td class=\"data\" id=\"table-border\">$splitChar[0]</td>" .
                         "</tr>" .	
 
 
 			"<tr>" .
-	                	"<td class=\"data\" id=\"table-border\">{$row['players']}</td>" .
-				"<td class=\"data\" id=\"table-border\">{$row['characters']}</td>" .
+	                	"<td class=\"data\" id=\"table-border\">$splitPlay[1]</td>" .
+				"<td class=\"data\" id=\"table-border\">$splitChar[1]</td>" .
 			"</tr>" .	
 				
 
@@ -110,7 +111,7 @@ function writeEntryforIndex() {
 	"</div>" .
 
 "</div> ";	
-
+		/*
 		echo "<font color='#FF3D53'> VIDEO ID :{$row['video_id']}  <br> ".
 		"VIDEO URL : {$row['video_url']} <br> ".
 		"VIDEO NAME : {$row['video_name']} <br> ".
@@ -128,6 +129,7 @@ function writeEntryforIndex() {
 
 
 		echo "<font color='#FF3D53'>Fetched data successfully\n</font>";
+		 */
 		mysqli_close($conn);
 		$i++;
 	 }
