@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 <head>
     <title>FightHub - Upload</title>
     <link rel="stylesheet" href="main.css">
@@ -20,29 +20,29 @@
         <h3>Youtube URL *</h3>
         <input type="text" name="url" id="url">
 
-        <h3>Name *</h3>
-        <input type="text" name="name" id="name">
+        <h3>Video Title *</h3>
+        <input type="text" name="title" id="title">
         
         <h3>Username *</h3>
-        <input type="text" name="username">
+        <input type="text" name="username" id="username">
         
         <h3>Description</h3>
-        <textarea name="description" cols="30" rows="10"></textarea>
+        <textarea name="description" cols="30" rows="10" id="description"></textarea>
         
-        <h3>Event Date</h3>
-        <input type="date" name="video-date">
+        <h3>Event Date *</h3>
+        <input type="date" name="video-date" id="video-date">
         
         <h3>Video Length</h3>
-        <input type="text" name="length">
+        <input type="text" name="length" id="length">
         
         <h3>Characters (Seperated by commas) *</h3>
-        <input type="text" name="characters">
+        <input type="text" name="characters" id="characters">
         
         <h3>Players (Seperated by commas) *</h3>
-        <input type="text" name="players">
+        <input type="text" name="players" id="players">
         
         <h3>Select Game *</h3>
-        <select name="game">
+        <select name="game" id="game">
             <option disabled selected value>-- Game --</option>
             <option value="Street Fighter V">Street Fighter V</option>
             <option value="Mortal Kombat 11">Mortal Kombat 11</option>
@@ -51,11 +51,10 @@
             <option value="Killer Instinct">Killer Instinct</option>
             <option value="Injustice">Injustice</option>       
         </select>
-        
+
         <h3>Stage Name *</h3>
-        <input type="text" name="stage">
-        
-        
+        <input type="text" name="stage" id="stage">
+
         <input type="button" name="submit_button" value="Submit" onclick="validateUpload()">
     </form>
 
