@@ -65,7 +65,7 @@ form.upload-form {
 	color: #FF3D53;
 	/* border: white solid 1px; */
 	margin-bottom: 0px;
-    	margin-left: 20px;
+    margin-left: 2%;
 }
 
 h3.url {
@@ -74,8 +74,8 @@ h3.url {
 }
 
 .url {
-	margin: auto !important;
-	width: 60%;
+	/* margin: auto !important; */
+	width: 93%;
 }
 
 h3.title {
@@ -83,16 +83,18 @@ h3.title {
 }
 
 .title {
-	margin: auto !important;
-	width: 60%;
+	/* margin: auto !important; */
+	width: 93%;
 }
 
 .user-date {
-	width: 60%;
-	margin: auto;
+	width: 93%;
+	margin-left: 3%;
+	/* margin: auto; */
 }
 
 .username {
+	/* margin-left: 20px; */
 	padding-top: 20px;
 	margin-left: -20px;
 }
@@ -103,8 +105,8 @@ h3.title {
 }
 
 .description {
-	width: 60%;
-	margin:	auto !important;
+	width: 93%;
+	/* margin:	auto !important; */
 	resize: none;
 }
 
@@ -113,8 +115,8 @@ h3.description {
 }
 
 .characters {
-	width: 60%;
-	margin: auto !important;
+	width: 93%;
+	/* margin: auto !important; */
 }
 
 h3.characters {
@@ -122,8 +124,8 @@ h3.characters {
 }
 
 .players {
-	width: 60%;
-	margin: auto !important;
+	width: 93%;
+	/* margin: auto !important; */
 }
 
 h3.players {
@@ -131,8 +133,9 @@ h3.players {
 }
 
 .game-info {
-	width: 60%;
-	margin: auto;
+	width: 93%;
+	margin-left: 3%;
+	/* margin: auto; */
 }
 
 .game-name {
@@ -146,19 +149,23 @@ h3.players {
 }
 
 .length-button {
-	margin: auto;
-	width: 60%;
+	margin: 3%;
+	width: 93%;
 	/* border: white solid 1px; */
 }
 
 .length {
-	padding-top: 20px;
+	padding-top: 10px;
 	margin-left: -20px;
 }
 
 .button {
 	float: right;
 	margin-top: -21px;
+}
+
+h3 {
+	padding-left: 15px;
 }
 
 
