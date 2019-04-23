@@ -8,7 +8,7 @@
 <body>
     <!-- Titlebar -->
     <form class="search" action="search.php">
-        <h1 class="title-text">FightHub</h1>
+        <a href="/"><h1 class="title-text">FightHub</h1></a>
         <input type="text" name="query" class="search" placeholder="Search..">
         <input type="submit" name="submit" class="submit" value="Search">
         <a href="upload.php"><img src="images/upload.png" class="upload" alt="upload"></a>
