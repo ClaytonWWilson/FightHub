@@ -17,45 +17,67 @@
     <!-- submit.php will read the variables from the url and add it to the database -->
     <form class="upload-form" id="upload-form" action="submit.php">
 
-        <h3>Youtube URL *</h3>
-        <input type="text" name="url" id="url">
+        <h3 class="url">Youtube URL *</h3>
+        <input type="text" name="url" id="url" class="url">
 
-        <h3>Video Title *</h3>
-        <input type="text" name="title" id="title">
+        <h3 class="title">Video Title *</h3>
+        <input type="text" name="title" id="title" class="title">
         
-        <h3>Username *</h3>
-        <input type="text" name="username" id="username">
-        
-        <h3>Description</h3>
-        <textarea name="description" cols="30" rows="10" id="description"></textarea>
-        
-        <h3>Event Date *</h3>
-        <input type="date" name="video-date" id="video-date">
-        
-        <h3>Video Length</h3>
-        <input type="text" name="length" id="length">
-        
-        <h3>Characters (Seperated by commas) *</h3>
-        <input type="text" name="characters" id="characters">
-        
-        <h3>Players (Seperated by commas) *</h3>
-        <input type="text" name="players" id="players">
-        
-        <h3>Select Game *</h3>
-        <select name="game" id="game">
-            <option disabled selected value>-- Game --</option>
-            <option value="Street Fighter V">Street Fighter V</option>
-            <option value="Mortal Kombat 11">Mortal Kombat 11</option>
-            <option value="Super Smash Bros Melee">Super Smash Bros Melee</option>
-            <option value="Super Smash Bros Ultimate">Super Smash Ultimate</option>
-            <option value="Killer Instinct">Killer Instinct</option>
-            <option value="Injustice">Injustice</option>       
-        </select>
+        <div class="user-date">
+            <div class="username">
+                <h3>Username *</h3>
+                <input type="text" name="username" id="username">
+            </div>
 
-        <h3>Stage Name *</h3>
-        <input type="text" name="stage" id="stage">
+            
+            <div class="video-date">
+                <h3>Event Date *</h3>
+                <input type="date" name="video-date" id="video-date">
+            </div>
+        </div>
+        
+        <h3 class="description">Description</h3>
+        <textarea name="description" cols="30" rows="10" id="description" class="description"></textarea>
+        
+        <h3 class="characters">Characters (Seperated by commas) *</h3>
+        <input type="text" name="characters" id="characters" class="characters">
+        
+        <h3 class="players">Players (Seperated by commas) *</h3>
+        <input type="text" name="players" id="players" class="players">
+        
+            
+        
+        
+        <div class="game-info">
+            <div class="game-name">
+                <h3>Select Game *</h3>
+                <select name="game" id="game">
+                    <option disabled selected value>-- Game --</option>
+                    <option value="Street Fighter V">Street Fighter V</option>
+                    <option value="Mortal Kombat 11">Mortal Kombat 11</option>
+                    <option value="Super Smash Bros Melee">Super Smash Bros Melee</option>
+                    <option value="Super Smash Bros Ultimate">Super Smash Ultimate</option>
+                    <option value="Killer Instinct">Killer Instinct</option>
+                    <option value="Injustice">Injustice</option>       
+                </select>
+            </div>
 
-        <input type="button" name="submit_button" value="Submit" onclick="validateUpload()">
+            <div class="stage-name">
+                <h3 class="stage">Stage Name *</h3>
+                <input type="text" name="stage" id="stage" class="stage">
+            </div>
+        </div>
+
+        <div class="length-button">
+            <div class="length">
+                <h3>Video Length</h3>
+                <input type="text" name="length" id="length">
+            </div>
+
+            <div class="button">
+                <input type="button" name="submit_button" value="Submit" onclick="validateUpload()">
+            </div>
+        </div>
     </form>
 
 </body>

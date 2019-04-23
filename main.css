@@ -50,6 +50,8 @@ form.upload-form {
 	border-left: #727272 solid 2px;
 	border-right: #727272 solid 2px;
 	margin: 0 25% 0 25%;
+	margin-top: 60px;
+	margin-bottom: 60px;
 }
 
 .upload-form input, .upload-form textarea, .upload-form select {
@@ -66,20 +68,115 @@ form.upload-form {
     	margin-left: 20px;
 }
 
+h3.url {
+	/* padding-top: 40px; */
+	/* border: white solid 1px; */
+}
+
+.url {
+	margin: auto !important;
+	width: 60%;
+}
+
+h3.title {
+	padding-top: 40px;
+}
+
+.title {
+	margin: auto !important;
+	width: 60%;
+}
+
+.user-date {
+	width: 60%;
+	margin: auto;
+}
+
+.username {
+	padding-top: 20px;
+	margin-left: -20px;
+}
+
+.video-date {
+	float: right;
+	margin-top: -62px;
+}
+
+.description {
+	width: 60%;
+	margin:	auto !important;
+}
+
+h3.description {
+	padding-top: 40px;
+}
+
+.characters {
+	width: 60%;
+	margin: auto !important;
+}
+
+h3.characters {
+	padding-top: 40px;
+}
+
+.players {
+	width: 60%;
+	margin: auto !important;
+}
+
+h3.players {
+	padding-top: 40px;
+}
+
+.game-info {
+	width: 60%;
+	margin: auto;
+}
+
+.game-name {
+	padding-top: 20px;
+	margin-left: -20px;
+}
+
+.stage-name {
+	float: right;
+	margin-top: -61px;
+}
+
+.length-button {
+	margin: auto;
+	width: 60%;
+	/* border: white solid 1px; */
+}
+
+.length {
+	padding-top: 20px;
+	margin-left: -20px;
+}
+
+.button {
+	float: right;
+	margin-top: -21px;
+}
+
+
+
+
 /* Styles for Video element displays */
 
 div.video-list-container {
 	/* border: white solid 1px; */
-    	margin-left: 15%;
-        margin-right: 15%;
+		margin-left: 15%;
+		margin-right: 15%;
 }
 
 #video-item {
-    	/* border: white solid 1px; */
-    	width: 100%;
-        height: 178.75px;
-    	padding-top: 10px;
-        border-bottom: #727272 solid 2px;
+		/* border: white solid 1px; */
+		width: 100%;
+		height: 178.75px;
+		padding-top: 10px;
+		border-bottom: #727272 solid 2px;
 }
 
 iframe {
