@@ -105,6 +105,7 @@ h3.title {
 .description {
 	width: 60%;
 	margin:	auto !important;
+	resize: none;
 }
 
 h3.description {
