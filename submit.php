@@ -61,6 +61,6 @@ $conn->close()
 ?>
 
 <script>
-	location.replace("http://ec2-18-217-5-198.us-east-2.compute.amazonaws.com/index.php");
+	location.replace("http://ec2-13-58-8-152.us-east-2.compute.amazonaws.com/index.php");
 </script>
 
